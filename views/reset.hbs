@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{#if pageTitle}}{{pageTitle}}{{/if}}</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/userEdit.css">
+
+</head>
+<body style="margin-top: 140px;" class="dark">
+    {{#if message}}
+    <h1>{{message}}</h1>
+    {{/if}}
+        <h2>Welcome Back {{user.name}}</h2>
+
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+            <form action="/user/reset" onsubmit="return validate()" method="post">
+                <div class="formation">
+                <label class="labels" for="Name">Password</label>
+                <br>
+                <input class="inputs" type="password" value="" name="" placeholder="Password" id="password">
+                <br>
+                <label class="labels" for="Name">Re-Enter Password</label>
+                <br>
+                <input class="inputs" type="text" value="" name="password" placeholder="Re-Enter Password" id="rePassword">
+                <input class="btn-outline-warning update" type="submit" value="Update">
+                <input type="hidden" name="token" value="{{user.token}}">
+                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                </div>
+                </form>
+        </div>
+    </div>
+
+    {{#if messages.info}}
+            <div style="margin: 1%;" class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Denied! </strong>{{messages.info}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span style="font-weight: 700;" aria-hidden="true">&times;</span>
+            </button>
+            </div>
+        {{/if}}
+</body>
+    <script src="https://use.fontawesome.com/ada434e0af.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+    <script  src="/js/function.js"></script>
+    <script src="https://use.fontawesome.com/ada434e0af.js"></script>
+    <script>
+        const validate=()=>{
+            const password=document.getElementById('password').value
+            const rePassword=document.getElementById('rePassword').value
+            if(password.length<6)
+            {
+                alert('Password Length Must Be Greater Than 6')
+                return false
+            }
+            if(password!=rePassword)
+            {
+                alert('Password Must Be Same In Both Fields')
+                return false
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,93 @@
+body.dark .formation{
+    display: block;
+    width: min-content;
+    border: none;
+    border-top: 2px solid orange;
+    border-bottom: 2px solid orange;
+    border-radius: 3%;
+    padding: 20%;
+    padding-top: 9%;
+    padding-bottom: 9%;
+}
+
+.formation{
+    display: block;
+    width: min-content;
+    border: none;
+    border-top:2px solid rgb(0, 110, 255);
+    border-bottom:2px solid rgb(0, 110, 255);
+    border-radius: 3%;
+    padding: 20%;
+    padding-top: 9%;
+    padding-bottom: 9%;
+}
+
+.labels{
+    margin-right: 34%;
+    margin-bottom: 0;
+    padding: 0;
+    float: left;
+    margin-top: 1%;
+    font-size: 90%;
+    color: grey;
+}
+
+.inputs{
+    border:none;
+    outline: none;
+    border-bottom: 1px solid rgb(0, 110, 255);
+    border-radius: 8%;
+    background-color: transparent;
+    padding: 2%;
+    color: black;
+    width: 280px;
+}
+
+body.dark .inputs{
+    border:none;
+    border-bottom: 1px solid orange;
+    border-radius: 9%;
+    background-color: transparent;
+    padding: 2%;
+    color: orange;
+}
+body.dark .update{
+    padding: 2% 4% 0% 4%;
+    margin-top: 14%;
+    margin-bottom: 2%;
+    border-radius: 10%;
+    color: #FFC107;
+    border: 1px solid #FFC107;
+}
+
+body.dark .update:hover{
+    background-color: #FFC107;
+    color: #1F2029;
+}
+
+.update{
+    padding: 2% 4% 0% 4%;
+    margin-top: 14%;
+    border-radius: 10%;
+    color: rgb(0, 110, 255);;
+    border: 1px solid rgb(0, 110, 255);
+    margin-bottom: 2%;
+}
+.update:hover{
+    background-color: rgb(0, 110, 255);
+    color: white;
+    cursor: pointer;
+}
+body, html {
+	font-family: sans-serif, Arial, Verdana, "Trebuchet MS", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    
+}
+
+body.dark .activated{
+    color: #ff4242 !important;
+  }
+  
+  .activated{
+    color: #ff4242 !important;
+  }

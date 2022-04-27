@@ -1,0 +1,431 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" type="image/x-icon" href="\assets\images\favicon.png">
+<!-- Animation CSS -->
+<link rel="stylesheet" href="\assets\css\animate.css">	
+<!-- Latest Bootstrap min CSS -->
+<link rel="stylesheet" href="\assets\bootstrap\css\bootstrap.min.css">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"> 
+<!-- Icon Font CSS -->
+<link rel="stylesheet" href="\assets\css\all.min.css">
+<link rel="stylesheet" href="\assets\css\ionicons.min.css">
+<link rel="stylesheet" href="\assets\css\themify-icons.css">
+<link rel="stylesheet" href="\assets\css\linearicons.css">
+<link rel="stylesheet" href="\assets\css\flaticon.css">
+<link rel="stylesheet" href="\assets\css\simple-line-icons.css">
+<!--- owl carousel CSS-->
+<link rel="stylesheet" href="\assets\owlcarousel\css\owl.carousel.min.css">
+<link rel="stylesheet" href="\assets\owlcarousel\css\owl.theme.css">
+<link rel="stylesheet" href="\assets\owlcarousel\css\owl.theme.default.min.css">
+<!-- Magnific Popup CSS -->
+<link rel="stylesheet" href="\assets\css\magnific-popup.css">
+<!-- jquery-ui CSS -->
+<link rel="stylesheet" href="\assets\css\jquery-ui.css">
+<!-- Slick CSS -->
+<link rel="stylesheet" href="\assets\css\slick.css">
+<link rel="stylesheet" href="\assets\css\slick-theme.css">
+<!-- Style CSS -->
+<link rel="stylesheet" href="\assets\css\style.css">
+<link rel="stylesheet" href="\assets\css\responsive.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+@media screen and (min-width:700px){
+  .admin_log{
+    width:400px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    padding:15px;
+  }
+  .orderss{
+    width:80%;
+  }
+}
+@media screen and (max-width:700px){
+  .admin_log{
+    width:250px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    padding:15px;
+  }
+}
+/* Search Order*/
+.middle{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.inputx{
+  width:60px;
+  height:60px;
+  background:none;
+  border-radius:50px;
+  border:4px solid #fff;
+  box-sizing:border-box;
+  outline:none;
+  transition: width 0.4s ease-in-out,
+    border-radius 0.8s ease-in-out,
+    padding 0.2s;
+  transition-delay:0.4s;
+  color:white;
+  font-size:20px;
+}
+.inclicked{
+  width:360px;
+  border-radius:0;
+  padding:0 15px;
+  padding-righ:40px;
+}
+.btnx{
+  position:absolute;
+  width:60px;
+  height:60px;
+  top:0;
+  right:0;
+  box-sizing:border-box;
+  background:none;
+  border:none;
+  outline:none;
+  cursor:pointer;
+}
+.btnx::before{
+  content:"";
+  width:4px;
+  height:25px;
+  background:white;
+  position:absolute;
+  transform:rotate(-45deg);
+  bottom:-16px;
+  right:-6px;
+  transition:0.3s;
+}
+.closex::before,.closex::after{
+  content:"";
+  width:4px;
+  height:34px;
+  background:white;
+  position:absolute;
+  bottom:12px;
+  right:28px;
+}
+.closex::before{
+  transform:rotate(-45deg);
+}
+.closex::after{
+  transform:rotate(45deg);
+}
+::placeholder{
+  color: #f1f1f1;
+}
+/* Search Order*/
+</style>
+</head>
+<body>
+<div style="height:13vh; background-color:black">
+
+<img class="admin_log" src="\assets\images\logo\four_ww.png">
+
+</div>
+ <div class="tab-content dashboard_content">
+  
+<div class="tab-pane fade active show" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    	<div style="background-color: #0000;" class="card">
+                        <span style="font-size:40px;padding:10px 30px;cursor:pointer; color:white;" onclick="openNav()">&#9776;</span>
+                            <div class="card-body">
+                    			    <div class="login_register_wrap section">
+    <div class="container" style="margin-top:-60px">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-md-10">
+                <div class="login_wrap">
+            		<div class="padding_eight_all bg-white">
+                        <div class="heading_s1">
+                            <h3>Add product description</h3>
+                        </div>
+                        <form action="/product/edit/{{product.slug}}?_csrf={{csrfToken}}" method="post" enctype="multipart/form-data">
+                        <!-- <div class="form-group">
+                            <input type="file" id="myFile" name="filename">
+                        </div> -->
+                        
+                            <div class="form-group">
+                                <input type="text" required="" value="{{product.name}}" class="form-control" name="name" placeholder="Product Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" required="" value="{{product.slug}}" id="slug" style="width:70%;display: inline-block;" class="form-control" name="slug" placeholder="Product slug">
+                                <button type="button" role="button" onclick="validate()" class="btn btn-fill-out">Validate</button>
+                                <p id="message"></p>
+                            </div>
+                            <div class="form-group">
+                              {{!-- <input type="hidden" value="{{csrfToken}}" name="_csrf"> --}}
+                              <input multiple type="file" id="myFile" name="images">
+                        </div>
+                            <div class="form-group">
+                                <input type="text" required="" value="{{product.fullprice}}" class="form-control" name="fullprice" placeholder="Original price">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control"  type="text" value="{{product.price}}" name="price" placeholder="Price After Discount">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control"  type="text" value="{{product.discount_percent}}" name="discount_percent" placeholder="Discount Percentage">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="gist" placeholder="Write small decription about product">{{product.gist}}</textarea>
+                            </div>
+                            <div class="form-group">
+                              <input class="form-control"  type="text" value="{{product.warranty}}" name="warranty" placeholder="Warranty">
+                          </div>
+                          {{!-- <div class="form-group">
+                            <label for="return">Return</label><br>
+                            <input type="radio" name="option" value="1st" /> 10 Days<br>
+                            <input type="radio" name="option" value="2nd" /> 20 Days<br>
+                            <input type="radio" name="option" value="3rd" /> 30 Days
+                        </div> --}}
+                        <div class="form-group">
+                          <label for="COD">COD (Cash on delivery)</label><br>
+                          <input type="radio" value="true" {{#if product.cod}}checked{{/if}} name="cod">Yes&nbsp;
+                          <input type="radio" value="false" {{#if product.cod}}{{else}}checked{{/if}} name="cod">No<br>
+                      </div>
+                        <div class="form-group">
+                          <label for="COD">Is this An Exclusive Products?</label><br>
+                          <input type="radio" value="true" {{#if product.isExclusive}}checked{{/if}} name="isExclusive">Yes&nbsp;
+                          <input type="radio" value="false" {{#if product.isExclusive}}{{else}}checked{{/if}} name="isExclusive">No<br>
+                      </div>
+                      
+                      <div class="form-group input_fields_wrap">
+                          <label for="COD">Colors</label><br>
+                        &nbsp;<i style="color: black;" class="ti-plus add_field_button"></i>
+                    </div>
+                    <div class="form-group">
+                      <label for="category">Category</label><br>
+                      <select name="category" id="cars">
+                        <option value="{{product.category}}">{{product.category}}</option>
+                        <option value="Active">Active</option>
+                        <option value="Original">Original</option>
+                        <option value="Neons">Neons</option>
+                        <option value="Winter">Winter</option>
+                        <option value="Matte">Matte</option>
+                      </select><br>
+                      <div class="form-group">
+                        <textarea class="form-control"  type="text" name="description" rows="4" cols="55"  placeholder="Write full description about product">{{product.description}}</textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="add info">Additional information</label>
+                      {{!-- <input class="form-control"  type="text" name="capacity" placeholder="Capacity"><br> --}}
+                      
+                      <input class="form-control"  type="text" name="material" value="{{product.material}}" placeholder="Material">
+
+                  </div>
+                  </div>
+                        
+                            
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-fill-out btn-block" name="register">Submit</button>
+                            </div>
+                        </form>
+                        
+                        <!-- <ul class="btn-login list_none text-center">
+                            <li><a href="#" class="btn btn-facebook"><i class="ion-social-facebook"></i>Facebook</a></li>
+                            <li><a href="#" class="btn btn-google"><i class="ion-social-googleplus"></i>Google</a></li>
+                        </ul> -->
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                            </div>
+                        </div>
+                  	</div>
+<div class="tab-pane fade {{#if productAdded}}{{else}}active show{{/if}}" id="orders" role="tabpanel" aria-labelledby="orders-tab">
+ <span style="font-size:40px;padding:10px 30px;cursor:pointer; color:white;" onclick="openNav()">&#9776;</span>
+                    	<div class="card orderss" style="margin-left:auto; margin-right:auto; display:block">
+                        	<div class="card-header">
+                                <h3>Recent Orders</h3>
+                            </div>
+                            <div class="card-body">
+                    			<div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order</th>
+                                                <th>Date</th>
+                                                <th>Status</th>
+                                                <th>Total</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{#each orders}}
+                                            <tr>
+                                                <td>#{{_id}}</td>
+                                                <td class="date" >{{date}}</td>
+                                                <td>{{status}}</td>
+                                                <td>₹ {{cart.totalPrice}} for <span class="totalQty">{{cart.totalQty}}</span> <span class="item"> item</span></td>
+                                                <td><a href="/order/search?id={{_id}}" class="btn btn-fill-out btn-sm">View</a></td>
+                                            </tr>
+                                          {{/each}}
+                                          <script>
+                                              const date=document.getElementsByClassName('date')
+                                              const totalQty=document.getElementsByClassName('totalQty')
+                                              const item=document.getElementsByClassName('item')
+                                              for(i=0;i<date.length;i++){
+                                                date[i].innerHTML=date[i].innerHTML.substr(0, 15);
+                                                if(parseInt(totalQty[i].innerHTML)>1){
+                                                  item[i].innerHTML=" items"
+                                                }
+                                              }
+                                            </script> 
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        {{#if pagination}}
+        		<div class="row">
+                    <div class="col-12">
+                        <ul class="pagination mt-3 justify-content-center pagination_style1">
+                          {{#paginate pagination type="previous"}}
+                          <li class="page-item"><a class="page-link" href="{{append}}page={{n}}"><i class="linearicons-arrow-left"></i></a></li>
+                          {{/paginate}}
+                            {{#paginate pagination type="middle" limit="7"}}
+                            
+                            <li class="page-item active"><a class="page-link" id="page{{n}}" href="{{#if append}}{{append}}page={{n}}{{else}}?page={{n}}{{/if}}">{{n}}</a></li>
+    {{/paginate}}
+    
+    {{#paginate pagination type="next"}}
+                            <li class="page-item"><a class="page-link" href="{{append}}page={{n}}"><i class="linearicons-arrow-right"></i></a></li>
+                            
+    {{/paginate}}
+                        </ul>
+                    </div>
+                </div>
+                {{/if}}
+                  	</div>
+
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<script src="/js/validate.js"></script>
+   <script src="\assets\js\jquery-1.12.4.min.js"></script> 
+<!-- jquery-ui --> 
+<script src="\assets\js\jquery-ui.js"></script>
+<!-- popper min js -->
+<script src="\assets\js\popper.min.js"></script>
+<!-- Latest compiled and minified Bootstrap --> 
+<script src="\assets\bootstrap\js\bootstrap.min.js"></script> 
+<!-- owl-carousel min js  --> 
+<script src="\assets\owlcarousel\js\owl.carousel.min.js"></script> 
+<!-- magnific-popup min js  --> 
+<script src="\assets\js\magnific-popup.min.js"></script> 
+<!-- waypoints min js  --> 
+<script src="\assets\js\waypoints.min.js"></script> 
+<!-- parallax js  --> 
+<script src="\assets\js\parallax.js"></script> 
+<!-- countdown js  --> 
+<script src="\assets\js\jquery.countdown.min.js"></script> 
+<!-- imagesloaded js --> 
+<script src="\assets\js\imagesloaded.pkgd.min.js"></script>
+<!-- isotope min js --> 
+<script src="\assets\js\isotope.min.js"></script>
+<!-- jquery.dd.min js -->
+<script src="\assets\js\jquery.dd.min.js"></script>
+<!-- slick js -->
+<script src="\assets\js\slick.min.js"></script>
+<!-- elevatezoom js -->
+<script src="\assets\js\jquery.elevatezoom.js"></script>
+<!-- scripts js --> 
+<script src="\assets\js\scripts.js"></script>
+</body>
+<script>
+  
+
+  const allColors='{{product.colors}}'
+  const colors=allColors.split(",")
+  for(let i=0;i<colors.length;i++){
+    $(".input_fields_wrap").append(`<div><input class="form-control" style="width: 80%;display: inline-block; "  type="text" name="colors[]" value="${colors[i]}" placeholder="Color Code">&nbsp;<a href="#" style="color:red" class="remove_field"> Remove</a></div>`)
+  }
+
+  $(".btnx").on("click",function(){
+  $(".inputx").toggleClass("inclicked");
+  $(".btnx").toggleClass("closex");
+})
+  $(document).ready(function() {
+
+    $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
+    $("#success-alert").slideUp(500);
+});
+	var max_fields      = 10; //maximum input boxes allowed
+	var wrapper   		= $(".input_fields_wrap"); //Fields wrapper
+	var add_button      = $(".add_field_button"); //Add button ID
+	
+	var x = 1; //initlal text box count
+	$(add_button).click(function(e){ //on add input button click
+		e.preventDefault();
+		if(x < max_fields){ //max input box allowed
+			x++; //text box increment
+			$(wrapper).append('<div><input class="form-control" style="width: 80%;display: inline-block; "  type="text" name="colors[]" placeholder="Color Code">&nbsp;<a href="#" style="color:red" class="remove_field"> Remove</a></div>'); //add input box
+		}
+	});
+	
+	$(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+		e.preventDefault(); $(this).parent('div').remove(); x--;
+	})
+});
+</script>
+</html> 

@@ -1,0 +1,1015 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="Anil z" name="author" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="UNEAK by DEVOFTECH has Powerful features and You Can Use for selling Fashion Products, Shoes, Bags, Cosmetics, Clothes, Sunglasses, Furniture, Kids Products, Electronics, Stationery Products and Sporting Goods."
+    />
+    <meta
+      name="keywords"
+      content="ecommerce, electronics store, Fashion store, furniture store,  bootstrap 4, clean, minimal, modern, online store, responsive, retail, shopping, ecommerce store"
+    />
+
+    <!-- SITE TITLE -->
+    <title>Uneak</title>
+    <!-- Favicon Icon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/assets\images\favicon.png"
+    />
+    <!-- Animation CSS -->
+    <link rel="stylesheet" href="/assets\css\animate.css" />
+    <!-- Latest Bootstrap min CSS -->
+    <link rel="stylesheet" href="/assets\bootstrap\css\bootstrap.min.css" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets\css\all.min.css" />
+    <link rel="stylesheet" href="/assets\css\ionicons.min.css" />
+    <link rel="stylesheet" href="/assets\css\themify-icons.css" />
+    <link rel="stylesheet" href="/assets\css\linearicons.css" />
+    <link rel="stylesheet" href="/assets\css\flaticon.css" />
+    <link rel="stylesheet" href="/assets\css\simple-line-icons.css" />
+    <!--- owl carousel CSS-->
+    <link rel="stylesheet" href="/assets\owlcarousel\css\owl.carousel.min.css" />
+    <link rel="stylesheet" href="/assets\owlcarousel\css\owl.theme.css" />
+    <link
+      rel="stylesheet"
+      href="/assets\owlcarousel\css\owl.theme.default.min.css"
+    />
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="/assets\css\magnific-popup.css" />
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="/assets\css\slick.css" />
+    <link rel="stylesheet" href="/assets\css\slick-theme.css" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/assets\css\style.css" />
+    <link rel="stylesheet" href="/assets\css\responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <!-- LOADER -->
+    <div class="preloader">
+      <div class="lds-ellipsis">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- END LOADER -->
+
+    <!-- Home Popup Section -->
+    <!-- <div
+      class="modal fade subscribe_popup"
+      id="onload-popup"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true"
+                ><i class="ion-ios-close-empty"></i
+              ></span>
+            </button>
+            <div class="row no-gutters">
+              <div class="col-sm-7">
+                <div class="popup_content text-left">
+                  <div class="popup-text">
+                    <div class="heading_s1">
+                      <h3>Subscribe Newsletter and Get 25% Discount!</h3>
+                    </div>
+                    <p>
+                      Subscribe to the newsletter to receive updates about new
+                      products.
+                    </p>
+                  </div>
+                  <form method="post">
+                    <div class="form-group">
+                      <input
+                        name="email"
+                        required=""
+                        type="email"
+                        class="form-control"
+                        placeholder="Enter Your Email"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <button
+                        class="btn btn-fill-out btn-block text-uppercase"
+                        title="Subscribe"
+                        type="submit"
+                      >
+                        Subscribe
+                      </button>
+                    </div>
+                  </form>
+                  <div class="chek-form">
+                    <div class="custome-checkbox">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="checkbox"
+                        id="exampleCheckbox3"
+                        value=""
+                      />
+                      <label class="form-check-label" for="exampleCheckbox3"
+                        ><span>Don't show this popup again!</span></label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-5">
+                <div
+                  class="background_bg h-100"
+                  data-img-src="popup_img.jpg"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- End Screen Load Popup Section -->
+    <div class="icon-bar" style=" background-color:black">
+      <a href="/bulk/registration"><h1 class="side_info try" style="width:5px; background-color:black">ORDER IN BULK</h1></a>
+  <!-- <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="google"><i class="fa fa-google"></i></a>
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> -->
+</div>
+    <!-- START HEADER -->
+{{> header}}
+    <!-- END HEADER -->
+    {{#if message}}
+    <div class="alert alert-secondary alert-dismissible fade show" id="success-alert" role="alert">
+  <strong>Success</strong> {{message}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+  {{/if}}
+    <!-- START SECTION BANNER -->
+    <div
+      class="banner_section slide_medium shop_banner_slider staggered-animation-wrap"
+    >
+      <div
+        id="carouselExampleControls"
+        class="carousel slide carousel-fade light_arrow"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div
+            class="carousel-item background_bg active"
+            data-img-src="/assets/images/reddy5.png"
+          >
+            <div class="banner_slide_content banner_content_inner">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-7 col-10">
+                    <div class="banner_content overflow-hidden">
+                      <h2
+                        class="staggered-animation"
+                        data-animation="slideInLeft"
+                        data-animation-delay="0.5s"
+                      >
+                        BEST QUALITY<br>T-SHIRTS
+                      </h2>
+                      <h5
+                        class="mb-3 mb-sm-4 staggered-animation font-weight-light"
+                        data-animation="slideInLeft"
+                        data-animation-delay="1s"
+                      >
+                        Get up to <span class="text_default">50%</span> off
+                        Today Only!
+                      </h5>
+                      <a
+                        class="btn btn-fill-out staggered-animation text-uppercase"
+                        href="shop-left-sidebar.html"
+                        data-animation="slideInLeft"
+                        data-animation-delay="1.5s"
+                        >Shop Now</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="carousel-item background_bg"
+            data-img-src="/assets/images/reddy7.png"
+          >
+            <div class="banner_slide_content banner_content_inner">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-8 col-10">
+                    <div class="banner_content overflow-hidden">
+                      <h2
+                        class="staggered-animation"
+                        data-animation="slideInLeft"
+                        data-animation-delay="0.5s"
+                      >
+                        Stunning Hoodies
+                      </h2>
+                      <h5
+                        class="mb-3 mb-sm-4 staggered-animation font-weight-light"
+                        data-animation="slideInLeft"
+                        data-animation-delay="1s"
+                      >
+                        <span class="text_default">50%</span> off in all
+                        products
+                      </h5>
+                      <a
+                        class="btn btn-fill-out staggered-animation text-uppercase"
+                        href="shop-left-sidebar.html"
+                        data-animation="slideInLeft"
+                        data-animation-delay="1.5s"
+                        >Shop Now</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="carousel-item background_bg"
+            data-img-src="/assets/images/reddy6.png"
+          >
+            <div class="banner_slide_content banner_content_inner">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-8 col-10">
+                    <div class="banner_content overflow-hidden">
+                      <h2
+                        class="staggered-animation"
+                        data-animation="slideInLeft"
+                        data-animation-delay="0.5s"
+                      >
+                        Amazing Tanktops
+                      </h2>
+                      <h5
+                        class="mb-3 mb-sm-4 staggered-animation font-weight-light"
+                        data-animation="slideInLeft"
+                        data-animation-delay="1s"
+                      >
+                        Taking your Viewing Experience to Next Level
+                      </h5>
+                      <a
+                        class="btn btn-fill-out staggered-animation text-uppercase"
+                        href="shop-left-sidebar.html"
+                        data-animation="slideInLeft"
+                        data-animation-delay="1.5s"
+                        >Shop Now</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a style="border-radius:50%"
+          class="carousel-control-prev"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="prev"
+          ><i class="ion-chevron-left"></i
+        ></a>
+        <a style="border-radius:50%"
+          class="carousel-control-next"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="next"
+          ><i class="ion-chevron-right"></i
+        ></a>
+      </div>
+    </div>
+    <!-- END SECTION BANNER -->
+
+    <!-- END MAIN CONTENT -->
+    <div class="main_content">
+      <!-- START SECTION BANNER -->
+      <!-- <div class="section pb_20 small_pt">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="sale-banner mb-3 mb-md-4">
+                <a class="hover_effect1" href="#">
+                  <img
+                    src="/assets\images\promo1.png"
+                    alt="shop_banner_img7"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="sale-banner mb-3 mb-md-4">
+                <a class="hover_effect1" href="#">
+                  <img
+                    src="/assets\images\promo2.png"
+                    alt="shop_banner_img8"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="sale-banner mb-3 mb-md-4">
+                <a class="hover_effect1" href="#">
+                  <img
+                    src="/assets\images\promo3.png"
+                    alt="shop_banner_img9"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+<!--      <div class="section pb_20 small_pt">
+	<div class="custom-container">
+    	<div class="row">
+        	<div class="col-md-4">
+            	<div class="sale-banner mb-3 mb-md-4">
+                	<a class="hover_effect1" href="#">
+                		<img src="/assets\images\promo1.png" alt="shop_banner_img7">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+            	<div class="sale-banner mb-3 mb-md-4">
+                	<a class="hover_effect1" href="#">
+                		<img src="/assets\images\promo2.png" alt="shop_banner_img8">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+            	<div class="sale-banner mb-3 mb-md-4">
+                	<a class="hover_effect1" href="#">
+                		<img src="/assets\images\promo3.png" alt="shop_banner_img9">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ END SECTION BANNER -->      
+<div class="log" style="padding-top:2rem">
+           <img class="log-img" src="/assets/images/logo/one_w.png" alt="Card image cap" >
+           <br><br>
+        
+      </div>
+      <div class="card-deck" style="margin-top:10px">
+  <div class="card" style="border:none">
+  <a class="hover_effect1" href="#">
+    <img class="card-img-top" src="/assets/images/bigone.jpg" alt="Card image cap" style=" margin-left:auto; margin-right:auto;"></a>
+  </div>
+
+  <div class="card" style="border:none">
+  <a class="hover_effect1" href="#">
+    <img class="card-img-top" src="/assets/images/bigtwo.jpg" alt="Card image cap" style=" margin-left:auto; margin-right:auto"></a>
+  </div>
+</div>
+      <!-- START SECTION CATEGORIES -->
+      <div class="section small_pb small_pt">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="heading_s4 text-center">
+                <h2 style="color:white">Top Categories</h2>
+              </div>
+              <p class="text-center leads">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus blandit massa enim Nullam nunc varius.
+              </p>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div
+                class="cat_slider cat_style1 mt-4 mt-md-0 carousel_slider owl-carousel owl-theme nav_style5"
+                data-loop="true"
+                data-dots="false"
+                data-nav="true"
+                data-margin="30"
+                data-responsive='{"0":{"items": "2"}, "480":{"items": "3"}, "576":{"items": "4"}, "768":{"items": "5"}, "991":{"items": "6"}, "1199":{"items": "7"}}'
+              >
+                <div class="item">
+                  <div class="categories_box">
+                    <a href="#">
+                      <img loading="lazy" src="/assets\images\cat_img1.png" alt="cat_img1" />
+                      <span style="color:white">Television</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="categories_box">
+                    <a href="#">
+                      <img loading="lazy" src="/assets\images\cat_img2.png" alt="cat_img2" />
+                      <span style="color:white">Mobile</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="categories_box">
+                    <a href="#">
+                      <img loading="lazy" src="/assets\images\cat_img3.png" alt="cat_img3" />
+                      <span style="color:white">Headphone</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="categories_box">
+                    <a href="#">
+                      <img loading="lazy" src="/assets\images\cat_img4.png" alt="cat_img4" />
+                      <span style="color:white">Watch</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="categories_box">
+                    <a href="#">
+                      <img loading="lazy" src="/assets\images\cat_img5.png" alt="cat_img5" />
+                      <span style="color:white">Game</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="categories_box">
+                    <a href="#">
+                      <img loading="lazy" src="/assets\images\cat_img6.png" alt="cat_img6" />
+                      <span style="color:white">Camera</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="categories_box">
+                    <a href="#">
+                      <img loading="lazy" src="/assets\images\cat_img7.png" alt="cat_img7" />
+                      <span style="color:white">Audio</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END SECTION CATEGORIES -->
+
+      <!-- START SECTION SHOP -->
+      <div class="section small_pb small_pt">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="heading_s1 text-center">
+                <h2  style="color:white">Exclusive Products</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div
+                class="product_slider carousel_slider owl-carousel owl-theme dot_style1"
+                data-loop="true"
+                data-margin="20"
+                data-responsive='{"0":{"items": "1"}, "481":{"items": "2"}, "768":{"items": "3"}, "991":{"items": "4"}}'
+               >
+               {{#each products}}
+                <div class="item">
+                  <div class="product_wrap">
+                    <div class="product_img" style="cursor:pointer;" onclick="document.location.href='/product/detail/{{slug}}';" >
+                      
+                        <img loading="lazy" src="data:image/jpg;base64,{{images.0.image}}" alt="el_img2" />
+                        <img
+                          class="product_hover_img"
+                          src="data:image/jpg;base64,{{images.1.image}}"
+                          alt="el_hover_img2"
+                        />
+                      <div class="product_action_box">
+                        <ul class="list_none pr_action_btn">
+                          <li class="add-to-cart">
+                            <a href="#" 
+                              ><i class="icon-basket-loaded"></i> Add To Cart</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="product_info">
+                      <h6 class="product_title">
+                        <a href="/product/detail/{{slug}}"
+                          > <span class="" style="color: #ff324d;">{{name}}</span> </a
+                        >
+                      </h6>
+                      <div class="product_price">
+                        <span class="price">₹{{price}}</span>
+                        <del>₹{{fullprice}}</del>
+                        <div class="on_sale">
+                          <span>{{discount_percent}}% Off</span>
+                        </div>
+                      </div>
+                      {{!-- <div class="rating_wrap">
+                        <div class="rating">
+                          <div class="product_rate" style="width: 68%"></div>
+                        </div>
+                        <span class="rating_num">(15)</span>
+                      </div> --}}
+                    </div>
+                  </div>
+                </div>
+                {{/each}}
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END SECTION SHOP -->
+
+      <!-- START SECTION BANNER -->
+     
+      <!-- END SECTION BANNER -->
+
+      <!-- START SECTION SHOP -->
+      <!-- END SECTION SHOP -->
+
+      <!-- END SECTION SHOP -->
+	    <!--JOIN OUT TEAM-->
+        <section id="newsletter">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-6">
+                <h3>Be Our Partner</h3>
+                <p style="color:white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text</p>
+              </div>
+          </div>
+          <div class="row justify-content-center">
+              <div class="col-lg-6">
+               
+              </div>
+          </div>
+          
+      </div>
+  </section>
+
+      <!--End Join Our Team-->
+      <div class="section small_pt small_pb" style="margin-top:-50px">
+	<div class="container-fluid p-0">
+        <div class="row no-gutters">
+        	<div class="col-12">
+            	
+            	<div class="follow_box">
+                    <i class="ti-instagram"></i>
+                    <h3>instagram</h3>
+                    <span>@shoppingzone</span>
+                </div>
+            	<div class="client_logo carousel_slider owl-carousel owl-theme" data-dots="false" data-margin="0" data-loop="true" data-autoplay="true" data-responsive='{"0":{"items": "2"}, "480":{"items": "3"}, "767":{"items": "4"}, "991":{"items": "6"}}'>
+                	<div class="item">
+                    	<div class="instafeed_box">
+                        	<a href="#">
+                                <img src="/assets\images\furniture_insta1.jpg" alt="furniture_insta1">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="instafeed_box">
+                        	<a href="#">
+                                <img src="/assets\images\furniture_insta2.jpg" alt="furniture_insta2">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="instafeed_box">
+                        	<a href="#">
+                                <img src="/assets\images\furniture_insta3.jpg" alt="furniture_insta3">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="instafeed_box">
+                        	<a href="#">
+                                <img src="/assets\images\furniture_insta4.jpg" alt="furniture_insta4">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="instafeed_box">
+                        	<a href="#">
+                                <img src="/assets\images\furniture_insta5.jpg" alt="furniture_insta5">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="instafeed_box">
+                        	<a href="#">
+                                <img src="/assets\images\furniture_insta6.jpg" alt="furniture_insta6">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      <!-- START SECTION TESTIMONIAL -->
+      <div class="section" style="background-color: #000000;
+background-image: linear-gradient(315deg, #000000 0%, #414141 74%); top:-20px">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="heading_s1 text-center">
+                <h2 style="color:#FF324D">Our Client Say!</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <div
+                class="testimonial_wrap testimonial_style1 carousel_slider owl-carousel owl-theme nav_style2"
+                data-nav="true"
+                data-dots="false"
+                data-center="true"
+                data-loop="true"
+                data-autoplay="true"
+                data-items="1"
+              >
+                <div class="testimonial_box">
+                  <div class="testimonial_desc">
+                    <p style="color:white">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      A aliquam amet animi blanditiis consequatur debitis dicta
+                      distinctio, enim error eum iste libero modi nam natus
+                      perferendis possimus quasi sint sit tempora voluptatem.
+                    </p>
+                  </div>
+                  <div class="author_wrap">
+                    <div class="author_img">
+                      <img src="/assets\images\user_img1.jpg" alt="user_img1" />
+                    </div>
+                    <div class="author_name">
+                      <h6 style="color:white">Lissa Castro</h6>
+                      <span style="color:white">Designer</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial_box">
+                  <div class="testimonial_desc">
+                    <p style="color:white">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      A aliquam amet animi blanditiis consequatur debitis dicta
+                      distinctio, enim error eum iste libero modi nam natus
+                      perferendis possimus quasi sint sit tempora voluptatem.
+                    </p>
+                  </div>
+                  <div class="author_wrap">
+                    <div class="author_img">
+                      <img src="/assets\images\user_img2.jpg" alt="user_img2" />
+                    </div>
+                    <div class="author_name">
+                      <h6 style="color:white">Alden Smith</h6>
+                      <span style="color:white">Designer</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial_box">
+                  <div class="testimonial_desc">
+                    <p style="color:white">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      A aliquam amet animi blanditiis consequatur debitis dicta
+                      distinctio, enim error eum iste libero modi nam natus
+                      perferendis possimus quasi sint sit tempora voluptatem.
+                    </p>
+                  </div>
+                  <div class="author_wrap">
+                    <div class="author_img">
+                      <img src="/assets\images\user_img3.jpg" alt="user_img3" />
+                    </div>
+                    <div class="author_name">
+                      <h6 style="color:white">Daisy Lana</h6>
+                      <span style="color:white">Designer</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial_box">
+                  <div class="testimonial_desc">
+                    <p style="color:white">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      A aliquam amet animi blanditiis consequatur debitis dicta
+                      distinctio, enim error eum iste libero modi nam natus
+                      perferendis possimus quasi sint sit tempora voluptatem.
+                    </p>
+                  </div>
+                  <div class="author_wrap">
+                    <div class="author_img">
+                      <img src="/assets\images\user_img4.jpg" alt="user_img4" />
+                    </div>
+                    <div class="author_name">
+                      <h6 style="color:white">John Becker</h6>
+                      <span style="color:white">Designer</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END SECTION TESTIMONIAL -->
+
+      <!-- START SECTION BLOG -->
+      <!-- <div class="section pb_20">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+              <div class="heading_s1 text-center">
+                <h2>Latest News</h2>
+              </div>
+              <p class="leads text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="blog_post blog_style2 box_shadow1">
+                <div class="blog_img">
+                  <a href="blog-single.html">
+                    <img
+                      src="/assets\images\el_blog_img1.jpg"
+                      alt="el_blog_img1"
+                    />
+                  </a>
+                </div>
+                <div class="blog_content bg-white">
+                  <div class="blog_text">
+                    <h5 class="blog_title">
+                      <a href="blog-single.html"
+                        >But I must explain to you how all this mistaken idea</a
+                      >
+                    </h5>
+                    <ul class="list_none blog_meta">
+                      <li>
+                        <a href="#"
+                          ><i class="ti-calendar"></i> April 14, 2018</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"><i class="ti-comments"></i> 2 Comment</a>
+                      </li>
+                    </ul>
+                    <p>
+                      If you are going to use a passage of Lorem Ipsum, you need
+                      to be sure there isn't anything hidden in the text
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="blog_post blog_style2 box_shadow1">
+                <div class="blog_img">
+                  <a href="blog-single.html">
+                    <img
+                      src="/assets\images\el_blog_img2.jpg"
+                      alt="el_blog_img2"
+                    />
+                  </a>
+                </div>
+                <div class="blog_content bg-white">
+                  <div class="blog_text">
+                    <h5 class="blog_title">
+                      <a href="blog-single.html"
+                        >On the other hand we provide denounce with righteous</a
+                      >
+                    </h5>
+                    <ul class="list_none blog_meta">
+                      <li>
+                        <a href="#"
+                          ><i class="ti-calendar"></i> April 14, 2018</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"><i class="ti-comments"></i> 2 Comment</a>
+                      </li>
+                    </ul>
+                    <p>
+                      If you are going to use a passage of Lorem Ipsum, you need
+                      to be sure there isn't anything hidden in the text
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="blog_post blog_style2 box_shadow1">
+                <div class="blog_img">
+                  <a href="blog-single.html">
+                    <img
+                      src="/assets\images\el_blog_img3.jpg"
+                      alt="el_blog_img2"
+                    />
+                  </a>
+                </div>
+                <div class="blog_content bg-white">
+                  <div class="blog_text">
+                    <h5 class="blog_title">
+                      <a href="blog-single.html"
+                        >Why is a ticket to Lagos so expensive?</a
+                      >
+                    </h5>
+                    <ul class="list_none blog_meta">
+                      <li>
+                        <a href="#"
+                          ><i class="ti-calendar"></i> April 14, 2018</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"><i class="ti-comments"></i> 2 Comment</a>
+                      </li>
+                    </ul>
+                    <p>
+                      If you are going to use a passage of Lorem Ipsum, you need
+                      to be sure there isn't anything hidden in the text
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- END SECTION BLOG -->
+
+      <!-- START SECTION CLIENT LOGO -->
+      <div class="section small_pt">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div
+                class="client_logo carousel_slider owl-carousel owl-theme"
+                data-dots="false"
+                data-margin="30"
+                data-loop="true"
+                data-autoplay="true"
+                data-responsive='{"0":{"items": "2"}, "480":{"items": "3"}, "767":{"items": "4"}, "991":{"items": "5"}}'
+              >
+                <div class="item" style="color:white">
+                  <div class="cl_logo">
+                    <img src="/assets\images\cl_logo1.png" alt="cl_logo" />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="cl_logo">
+                    <img src="/assets\images\cl_logo2.png" alt="cl_logo" />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="cl_logo">
+                    <img src="/assets\images\cl_logo3.png" alt="cl_logo" />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="cl_logo">
+                    <img src="/assets\images\cl_logo4.png" alt="cl_logo" />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="cl_logo">
+                    <img src="/assets\images\cl_logo5.png" alt="cl_logo" />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="cl_logo">
+                    <img src="/assets\images\cl_logo6.png" alt="cl_logo" />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="cl_logo">
+                    <img src="/assets\images\cl_logo7.png" alt="cl_logo" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END SECTION CLIENT LOGO -->
+
+      <!-- START SECTION SUBSCRIBE NEWSLETTER -->
+      <div class="section small_pt small_pb" style="background-color:#FF324D">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div class="newsletter_text text_white">
+                <h3>Join Our Newsletter Now</h3>
+                <p>Register now to get updates on promotions.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="newsletter_form2">
+                <form action="/enroll/newsletter" method="GET">
+                  <input
+                    type="text"
+                    required=""
+                    name="email"
+                    class="form-control rounded-0"
+                    placeholder="Enter Email Address"
+                  />
+                  <button
+                    type="submit"
+                    class="btn btn-dark rounded-0"
+                    name="submit"
+                    value="Submit"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- START SECTION SUBSCRIBE NEWSLETTER -->
+    </div>
+    <!-- END MAIN CONTENT -->
+
+{{>footer}}
+<!-- END FOOTER -->
+
+    <a href="#" class="scrollup" style="display: none"
+      ><i class="ion-ios-arrow-up"></i
+    ></a>
+    
+    <!-- Latest jQuery -->
+    <script src="/assets\js\jquery-1.12.4.min.js"></script>
+    <!-- popper min js -->
+    <script src="/assets\js\popper.min.js"></script>
+    <!-- Latest compiled and minified Bootstrap -->
+    <script src="/assets\bootstrap\js\bootstrap.min.js"></script>
+    <!-- owl-carousel min js  -->
+    <script src="/assets\owlcarousel\js\owl.carousel.min.js"></script>
+    <!-- magnific-popup min js  -->
+    <script src="/assets\js\magnific-popup.min.js"></script>
+    <!-- waypoints min js  -->
+    <script src="/assets\js\waypoints.min.js"></script>
+    <!-- parallax js  -->
+    <script src="/assets\js\parallax.js"></script>
+    <!-- countdown js  -->
+    <script src="/assets\js\jquery.countdown.min.js"></script>
+    <!-- imagesloaded js -->
+    <script src="/assets\js\imagesloaded.pkgd.min.js"></script>
+    <!-- isotope min js -->
+    <script src="/assets\js\isotope.min.js"></script>
+    <!-- jquery.dd.min js -->
+    <script src="/assets\js\jquery.dd.min.js"></script>
+    <!-- slick js -->
+    <script src="/assets\js\slick.min.js"></script>
+    <!-- elevatezoom js -->
+    <script src="/assets\js\jquery.elevatezoom.js"></script>
+    <!-- scripts js -->
+    <script src="/assets\js\scripts.js"></script>
+    <script>
+    $(document).ready(function() {
+      $("#success-alert").fadeTo(6000, 500).slideUp(500, function(){
+      $("#success-alert").slideUp(500);
+      });
+    })
+    </script>
+    <script>
+var closebtns = document.getElementsByClassName("item_remove");
+var i;
+
+for (i = 0; i < closebtns.length; i++) {
+  closebtns[i].addEventListener("click", function() {
+    this.parentElement.style.display = 'none';
+  });
+}
+</script>
+  </body>
+</html>

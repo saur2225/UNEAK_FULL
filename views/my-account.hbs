@@ -1,0 +1,509 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="Anil z" name="author">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Shopwise is Powerful features and You Can Use The Perfect Build this Template For Any eCommerce Website. The template is built for sell Fashion Products, Shoes, Bags, Cosmetics, Clothes, Sunglasses, Furniture, Kids Products, Electronics, Stationery Products and Sporting Goods.">
+<meta name="keywords" content="ecommerce, electronics store, Fashion store, furniture store,  bootstrap 4, clean, minimal, modern, online store, responsive, retail, shopping, ecommerce store">
+
+<!-- SITE TITLE -->
+<title>Uneak</title>
+<!-- Favicon Icon -->
+<link rel="shortcut icon" type="image/x-icon" href="/assets\images\favicon.png">
+<!-- Animation CSS -->
+<link rel="stylesheet" href="/assets\css\animate.css">	
+<!-- Latest Bootstrap min CSS -->
+<link rel="stylesheet" href="/assets\bootstrap\css\bootstrap.min.css">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"> 
+<!-- Icon Font CSS -->
+<link rel="stylesheet" href="/assets\css\all.min.css">
+<link rel="stylesheet" href="/assets\css\ionicons.min.css">
+<link rel="stylesheet" href="/assets\css\themify-icons.css">
+<link rel="stylesheet" href="/assets\css\linearicons.css">
+<link rel="stylesheet" href="/assets\css\flaticon.css">
+<link rel="stylesheet" href="/assets\css\simple-line-icons.css">
+<!--- owl carousel CSS-->
+<link rel="stylesheet" href="/assets\owlcarousel\css\owl.carousel.min.css">
+<link rel="stylesheet" href="/assets\owlcarousel\css\owl.theme.css">
+<link rel="stylesheet" href="/assets\owlcarousel\css\owl.theme.default.min.css">
+<!-- Magnific Popup CSS -->
+<link rel="stylesheet" href="/assets\css\magnific-popup.css">
+<!-- jquery-ui CSS -->
+<link rel="stylesheet" href="/assets\css\jquery-ui.css">
+<!-- Slick CSS -->
+<link rel="stylesheet" href="/assets\css\slick.css">
+<link rel="stylesheet" href="/assets\css\slick-theme.css">
+<!-- Style CSS -->
+<link rel="stylesheet" href="/assets\css\style.css">
+<link rel="stylesheet" href="/assets\css\responsive.css">
+
+</head>
+<style>
+  #copy-me {
+    display:none;
+  
+}
+#copy-btn{
+background-color:#FF324D;
+    color:white;
+    border:none;
+    border-radius:20px;
+    padding:5px 10px;
+}
+</style>
+<body>
+
+<!-- LOADER -->
+<div class="preloader">
+    <div class="lds-ellipsis">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!-- END LOADER -->
+
+<!-- Home Popup Section -->
+<!-- <div class="modal fade subscribe_popup" id="onload-popup" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+                </button>
+                <div class="row no-gutters">
+                    <div class="col-sm-5">
+                    	<div class="background_bg h-100" data-img-src="assets/images/popup_img.jpg"></div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="popup_content">
+                            <div class="popup-text">
+                                <div class="heading_s4">
+                                    <h4>Subscribe and Get 25% Discount!</h4>
+                                </div>
+                                <p>Subscribe to the newsletter to receive updates about new products.</p>
+                            </div>
+                            <form method="post">
+                            	<div class="form-group">
+                                	<input name="email" required="" type="email" class="form-control rounded-0" placeholder="Enter Your Email">
+                                </div>
+                                <div class="form-group">
+                                	<button class="btn btn-fill-line btn-block text-uppercase rounded-0" title="Subscribe" type="submit">Subscribe</button>
+                                </div>
+                            </form>
+                            <div class="chek-form">
+                                <div class="custome-checkbox">
+                                    <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox3" value="">
+                                    <label class="form-check-label" for="exampleCheckbox3"><span>Don't show this popup again!</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    	</div>
+    </div>
+</div> -->
+<!-- End Screen Load Popup Section --> 
+
+<!-- START HEADER -->
+{{>header}}
+<!-- END HEADER -->
+
+<!-- START SECTION BREADCRUMB -->
+
+<!-- END SECTION BREADCRUMB -->
+
+<!-- START MAIN CONTENT -->
+<div class="main_content">
+
+<!-- START SECTION SHOP -->
+<div class="section">
+	<div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4">
+                <div class="dashboard_menu">
+                    <ul class="nav nav-tabs flex-column" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link{{#if showOrders}}{{else}} active{{/if}}" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="false" style="color:white"><i class="ti-layout-grid2"></i>Dashboard</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link{{#if showOrders}} active{{else}}{{/if}}" id="orders-tab" data-toggle="tab" href="#orders" role="tab" aria-controls="orders" aria-selected="false" style="color:white"><i class="ti-shopping-cart-full"></i>Orders</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="address-tab" data-toggle="tab" href="#address" role="tab" aria-controls="address" aria-selected="true" style="color:white"><i class="ti-location-pin"></i>My Address</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="account-detail-tab" data-toggle="tab" href="#account-detail" role="tab" aria-controls="account-detail" aria-selected="true" style="color:white"><i class="ti-id-badge"></i>Account details</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="password-change-tab" data-toggle="tab" href="#password-change" role="tab" aria-controls="password-change" aria-selected="true" style="color:white"><i class="ti-key"></i>Password Change</a>
+                      </li>
+                      {{#if user.isAdmin}}
+                      <li class="nav-item">
+                        <a class="nav-link" href="/admin/dashboard" style="color:white"><i class="ti-layout-grid2"></i>Admin Dashboard</a>
+                      </li>
+                      {{/if}}
+                      <li class="nav-item">
+                        <a class="nav-link" href="/logout" style="color:white"><i class="ti-lock"></i>Logout</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-8">
+                <div class="tab-content dashboard_content">
+                  	<div class="tab-pane fade{{#if showOrders}}{{else}} active show{{/if}}" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    	<div class="card">
+                        	<div class="card-header">
+                                <h3>Dashboard</h3>
+                                {{!-- <i style="float:right;color:#F44336;font-size: larger; margin-top:-30px;" class="ti-wallet"> {{user.referal_bonus}}</i> --}}
+                                {{#if user.isMember}}
+                                <button style="float:right; margin-top:-30px; background-color:#F44336; border:none; color:white">Member <i class="linearicons-star" style="color:white"></i></button>
+                          {{/if}}
+                            </div>
+                            <div class="card-body">
+                              {{#if messages.info}}
+        <div style="margin: 1%;" class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Denied! </strong>{{messages.info}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span style="font-weight: 700;" aria-hidden="true">&times;</span>
+            </button>
+            </div>
+        {{/if}}
+                              {{#if message}}
+        <div style="margin: 1%;" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success! </strong>{{message}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span style="font-weight: 700;" aria-hidden="true">&times;</span>
+            </button>
+            </div>
+        {{/if}}
+                    			<p>From your account dashboard. you can easily check &amp; view your <a href="javascript:void(0);" onclick="$('#orders-tab').trigger('click')" style="color:#FF324D">recent orders</a>, manage your <a href="javascript:void(0);" onclick="$('#address-tab').trigger('click')" style="color:#FF324D">shipping and billing addresses</a> and <a href="javascript:void(0);" onclick="$('#account-detail-tab').trigger('click')" style="color:#FF324D">edit your password and account details.</a></p>
+                          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                          <input type="text" name="Element To Be Copied" id="copy-me" value="/signup?referal_code={{user.referal_code}}"/>
+                          <button id="copy-btn">Copy Referal Code</button>
+                          
+                          <p style="color:#F44336">Points - {{user.referal_bonus}}</p>
+                          
+                          
+                            </div>
+                        </div>
+                  	</div>
+                  	<div class="tab-pane fade{{#if showOrders}} active show{{else}}{{/if}}" id="orders" role="tabpanel" aria-labelledby="orders-tab">
+                    	{{#if orders}}
+                      <div class="card">
+                        	<div class="card-header">
+                                <h3>Orders</h3>
+                            </div>
+                            <div class="card-body">
+                    			<div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order</th>
+                                                <th>Date</th>
+                                                <th>Status</th>
+                                                <th>Total</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                          {{#each orders}}
+                                            <tr>
+                                                <td>#{{_id}}</td>
+                                                <td class="date" >{{date}}</td>
+                                                <td>{{status}}</td>
+                                                <td>₹ {{cart.totalPrice}} for <span class="totalQty">{{cart.totalQty}}</span> <span class="item"> item</span></td>
+                                                <td><a href="/order/search?id={{_id}}" class="btn btn-fill-out btn-sm">View</a></td>
+                                            </tr>
+                                          {{/each}}
+                                          <script>
+                                              const date=document.getElementsByClassName('date')
+                                              const totalQty=document.getElementsByClassName('totalQty')
+                                              const item=document.getElementsByClassName('item')
+                                              for(i=0;i<date.length;i++){
+                                                date[i].innerHTML=date[i].innerHTML.substr(0, 15);
+                                                if(parseInt(totalQty[i].innerHTML)>1){
+                                                  item[i].innerHTML=" items"
+                                                }
+                                              }
+                                            </script> 
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        {{#if pagination}}
+        		<div class="row">
+                    <div class="col-12">
+                        <ul class="pagination mt-3 justify-content-center pagination_style1">
+                          {{#paginate pagination type="previous"}}
+                          <li class="page-item"><a class="page-link" href="{{append}}page={{n}}"><i class="linearicons-arrow-left"></i></a></li>
+                          {{/paginate}}
+                            {{#paginate pagination type="middle" limit="7"}}
+                            
+                            <li class="page-item active"><a class="page-link" id="page{{n}}" href="{{#if append}}{{append}}page={{n}}{{else}}?page={{n}}{{/if}}">{{n}}</a></li>
+    {{/paginate}}
+    
+    {{#paginate pagination type="next"}}
+                            <li class="page-item"><a class="page-link" href="{{append}}page={{n}}"><i class="linearicons-arrow-right"></i></a></li>
+                            
+    {{/paginate}}
+                        </ul>
+                    </div>
+                </div>
+                {{/if}}
+                        {{else}}
+                        <div class="row justify-content-center">
+                          <div class="col-md-8">
+                              <div class="text-center order_complete">
+                                <i class="fas fa-times-circle"></i>
+                                  <div class="heading_s1">
+                                  <h3 style="color:white">No orders Yet!</h3>
+                                  </div>
+                                  <a href="/" class="btn btn-fill-out">Continue Shopping</a>
+                              </div>
+                          </div>
+                        </div>
+                        {{/if}}
+                  	</div>
+					<div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="address-tab">
+                    	<div class="row">
+                        	
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3>Shipping Address</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <address>{{user.name}}<br>{{#if address.landmark}}{{address.landmark}}<br>{{/if}}{{address.address_line1}}<br>{{address.address_line2}}<br>{{address.city}}<br>{{address.state}}<br>{{address.country}}<br>{{address.pincode}}<br>{{#if address.contact}}{{address.contact}}{{else}}{{user.contact}}{{/if}}
+                                        </address>
+                                        
+                                       
+                                  <div class="ship_detail">
+                    	<div class="form-group">
+                    	<div class="chek-form">
+                            <div class="custome-checkbox">
+                                <input class="form-check-input" type="checkbox" name="checkbox" id="differentaddress">
+                                <label class="form-check-label label_info" for="differentaddress"><span style="color:#FF324D">Edit</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    	<div class="different_address">
+      <form action="/user/address/update" method="post">
+                        
+                    <div class="form-group">
+                        <input class="form-control" required="" value="{{address.landmark}}" type="text" name="landmark" placeholder="Company Name/Landmark">
+                    </div>
+                    <input type="hidden" value="{{csrfToken}}" name="_csrf">
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{address.address_line1}}" name="address_line1" required="" placeholder="Address *">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="{{address.address_line2}}" name="address_line2" required="" placeholder="Address line 2">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" required="" type="text" value="{{address.city}}" name="city" placeholder="City *">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" required="" type="text" name="state" value="{{address.state}}" placeholder="State *">
+                    </div>
+                      <div class="form-group">
+                        <input class="form-control" required="" type="text" name="country" value="{{address.country}}" placeholder="country *">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" required="" type="text" name="pincode" value="{{address.pincode}}" placeholder="Pincode *">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" required="" type="text" name="contact" value="{{#if address.contact}}{{address.contact}}{{else}}{{user.contact}}{{/if}}" placeholder="Phone*">
+                    </div>
+                    <button type="submit" class="btn btn-fill-out" name="submit" value="Submit">Save</button>
+                        </form>
+                    </div>
+                    </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+                    <div class="tab-pane fade" id="account-detail" role="tabpanel" aria-labelledby="account-detail-tab">
+						<div class="card">
+                        	<div class="card-header">
+                                <h3>Account Details</h3>
+                            </div>
+                            <div class="card-body">
+                                <form method="post" action="/user/edit?_method=PATCH">
+                                    <div class="row">
+                                         <div class="form-group col-md-6">
+                                        	<label>Name <span class="required">*</span></label>
+                                            <input required="" value="{{user.name}}" class="form-control" name="name">
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                        	<label>Email Address <span class="required">*</span></label>
+                                            <input required="" class="form-control" value="{{user.email}}" name="email" type="email">
+                                        </div>
+                                        <input type="hidden" value="{{csrfToken}}" name="_csrf">
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn btn-fill-out" name="submit" value="Submit">Save</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+					</div>
+          <div class="tab-pane fade" id="password-change" role="tabpanel" aria-labelledby="password-change-tab">
+						<div class="card">
+                        	<div class="card-header">
+                                <h3>Change Password</h3>
+                            </div>
+                            <div class="card-body">
+                    			
+                                <form method="post" action="/user/password">
+                                    <div class="row">
+                                        <div class="form-group col-md-12">
+                                          <input type="hidden" value="{{csrfToken}}" name="_csrf">
+                                        	<label>Current Password <span class="required">*</span></label>
+                                            <input required="" class="form-control" name="currentPassword" type="password">
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                        	<label>New Password <span class="required">*</span></label>
+                                            <input required="" class="form-control" name="password" type="password">
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                        	<label>Confirm Password <span class="required">*</span></label>
+                                            <input required="" class="form-control" name="cpassword" type="password">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn btn-fill-out" name="submit" value="Submit">Save</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END SECTION SHOP -->
+
+<!-- START SECTION SUBSCRIBE NEWSLETTER -->
+<div class="section bg_default small_pt small_pb">
+	<div class="container">	
+    	<div class="row align-items-center">	
+            <div class="col-md-6">
+                <div class="heading_s1 mb-md-0 heading_light">
+                    <h3>Subscribe Our Newsletter</h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="newsletter_form">
+                    <form>
+                        <input type="text" required="" class="form-control rounded-0" placeholder="Enter Email Address">
+                        <button type="submit" class="btn btn-dark rounded-0" name="submit" value="Submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- START SECTION SUBSCRIBE NEWSLETTER -->
+
+</div>
+<!-- END MAIN CONTENT -->
+
+<!-- START FOOTER -->
+{{>footer}}
+<!-- END FOOTER -->
+
+<a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a> 
+<script>
+
+  var copyBtn   = $("#copy-btn"),
+    input     = $("#copy-me");
+
+function copyToClipboardFF(text) {
+  window.prompt ("Copy to clipboard: Ctrl C, Enter", text);
+}
+
+function copyToClipboard() {
+  var success   = true,
+      range     = document.createRange(),
+      selection;
+
+  // For IE.
+  if (window.clipboardData) {
+    window.clipboardData.setData("Text", input.val());        
+  } else {
+    // Create a temporary element off screen.
+    var tmpElem = $('<div>');
+    tmpElem.css({
+      position: "absolute",
+      left:     "-1000px",
+      top:      "-1000px",
+    });
+    // Add the input value to the temp element.
+    tmpElem.text(input.val());
+    $("body").append(tmpElem);
+    // Select temp element.
+    range.selectNodeContents(tmpElem.get(0));
+    selection = window.getSelection ();
+    selection.removeAllRanges ();
+    selection.addRange (range);
+    // Lets copy.
+    try { 
+      success = document.execCommand ("copy", false, null);
+    }
+    catch (e) {
+      copyToClipboardFF(input.val());
+    }
+    if (success) {
+      alert ("The text is on the clipboard, try to paste it!");
+      // remove temp element.
+      tmpElem.remove();
+    }
+  }
+}
+
+copyBtn.on('click', copyToClipboard);
+</script>
+<!-- Latest jQuery --> 
+<script src="/assets\js\jquery-1.12.4.min.js"></script> 
+<!-- jquery-ui --> 
+<script src="/assets\js\jquery-ui.js"></script>
+<!-- popper min js -->
+<script src="/assets\js\popper.min.js"></script>
+<!-- Latest compiled and minified Bootstrap --> 
+<script src="/assets\bootstrap\js\bootstrap.min.js"></script> 
+<!-- owl-carousel min js  --> 
+<script src="/assets\owlcarousel\js\owl.carousel.min.js"></script> 
+<!-- magnific-popup min js  --> 
+<script src="/assets\js\magnific-popup.min.js"></script> 
+<!-- waypoints min js  --> 
+<script src="/assets\js\waypoints.min.js"></script> 
+<!-- parallax js  --> 
+<script src="/assets\js\parallax.js"></script> 
+<!-- countdown js  --> 
+<script src="/assets\js\jquery.countdown.min.js"></script> 
+<!-- imagesloaded js --> 
+<script src="/assets\js\imagesloaded.pkgd.min.js"></script>
+<!-- isotope min js --> 
+<script src="/assets\js\isotope.min.js"></script>
+<!-- jquery.dd.min js -->
+<script src="/assets\js\jquery.dd.min.js"></script>
+<!-- slick js -->
+<script src="/assets\js\slick.min.js"></script>
+<!-- elevatezoom js -->
+<script src="/assets\js\jquery.elevatezoom.js"></script>
+<!-- scripts js --> 
+<script src="/assets\js\scripts.js"></script>
+
+</body>
+</html>

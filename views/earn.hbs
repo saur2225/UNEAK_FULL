@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  {{#if messages.error}}
+  <center><p>{{messages.error}}</p></center>
+  {{/if}}
+    <form autocomplete='off' action="/earn/register" method="POST" class='form'>
+  <div class='control'>
+    <h1>
+      Fill Your Details To Earn
+    </h1>
+  </div>
+  <div class='control block-cube block-input'>
+    <input name='name' value="{{user.name}}" placeholder='Name' type='text'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+  </div>
+  <div class='control block-cube block-input'>
+      <input type="hidden" value="{{csrfToken}}" name="_csrf" id="">
+    <input name='email' value="{{user.email}}" id="email" placeholder='E mail' type='text'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+  </div>
+  <div class='control block-cube block-input'>
+    <input name='contact' value="{{user.contact}}" placeholder='Mobile Number' type='text'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+  </div>
+  <button class='btn block-cube block-cube-hover' type='submit'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='text'>
+      Apply
+    </div>
+  </button>
+  <br>
+  <br>
+  <br>
+  </a>
+</form>
+</body>
+<script src="/js/signup.js"></script>
+</html>

@@ -1,0 +1,51 @@
+<div class="navigation-wrap bg-light start-header start-style" style="padding: 0;" >
+            <div class="container">
+            <div class="row">
+            <div class="col-12">
+            <nav class="navbar navbar-expand-md navbar-light">
+            
+            <a class="navbar-brand" href="http://www.devoftech.com" target="_blank"><img id="logo" src="http://www.devoftech.com/img/front.png" alt=""></a>	
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto py-4 py-md-0">
+            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 ">
+            <a class="nav-link dropdown-toggle" id="Blogs"  href="/admin/blog" role="button" aria-haspopup="true" aria-expanded="false">Blogs</a>
+            </li>
+            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 ">
+            <a class="nav-link dropdown-toggle" id="Add Blog"  href="/addBlog" role="button" aria-haspopup="true" aria-expanded="false">Add Blog</a>
+            </li>
+            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+            <a class="nav-link" id="Add Category" href="/addCategory">Add Category</a>
+            </li>
+            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+            <a class="nav-link" id="Delete Category" href="/deleteCategory">Delete Category</a>
+            </li>
+            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                <a id="switch" class="nav-link" href="#">Light Mode</a>&nbsp;<i id="theme" class="fa fa-sun-o" aria-hidden="true"></i>
+            </li>
+            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                <form action="/search" method="get" class="form-wrapper-2 cf">
+                    <input type="text" name="title" placeholder="Search here..." required>
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+            </li>
+            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/settings" role="button" aria-haspopup="true" aria-expanded="false">{{user.name}} <i class="fa fa-caret-down" aria-hidden="true"></i> </a>
+            <div class="dropdown-menu">
+            <a class="dropdown-item"  href="/user/me">Your Profile</a>
+            <a class="dropdown-item" href="/user/password">Change Password</a>
+            <a class="dropdown-item" href="/logout">Log Out</a>
+            </div>
+            </li>
+            </ul>
+            </div>
+            
+            </nav>		
+            </div>
+            </div>
+            </div>
+        </div>

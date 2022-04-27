@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<title>Send Newsletter</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="/css/addBlog.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+		{{#if message }}
+		<div class="alert alert-success alert-dismissible fade show" role="alert">
+			<strong>Awesome!</strong> {{message}}
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		{{/if}}
+
+		<div id="addBlog" class="addBlog">
+			<form action="/send/newsletter" method="post" >
+				<input type="hidden" name="_csrf" value="{{csrfToken}}">
+				<input type="text" id="title" required name="subject" class="label-input"
+					placeholder="Please Enter Subject Here" id="">
+					<br>
+					<br>
+				<div class="accordion" id="accordionExample">
+					<div class="card">
+						<div class="card-header" id="headingOne">
+							<h2 class="mb-0">
+								<button class="btn btn-link" type="button" data-toggle="collapse"
+									data-target="#collapseOne" id="textEditor" aria-expanded="true" onclick="setCode()"
+									aria-controls="collapseOne">
+									Text Editor
+								</button>
+							</h2>
+						</div>
+
+						<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+							data-parent="#accordionExample">
+							<div class="card-body">
+								<textarea class="editor" placeholder="Write Your Rest Content Here" name="content"
+									id="editor" cols="30" rows="10"></textarea>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<button id="submit" class="label-button" type="submit"
+					style="border: 2px dotted rgb(35, 34, 36);">Send</button>
+			</form>
+		</div>
+	</div>
+	<script src="/js/editor.js"></script>
+	<script>
+		var textEditor = document.getElementById('textEditor')
+		const getCode = () => {
+			textEditor.removeAttribute('disabled')
+			var codeEditor = document.getElementById('codeEditor')
+			codeEditor.value = editor.getData()
+		}
+		const setCode = () => {
+			editor.setData(codeEditor.value);
+		}
+	</script>
+	<script>ClassicEditor
+			.create(document.querySelector('.editor'), {
+
+				toolbar: {
+					items: [
+						'heading',
+						'|',
+						'bold',
+						'italic',
+						'underline',
+						'strikethrough',
+						'link',
+						'subscript',
+						'superscript',
+						'bulletedList',
+						'numberedList',
+						'todoList',
+						'|',
+						'alignment',
+						'indent',
+						'outdent',
+						'fontBackgroundColor',
+						'fontColor',
+						'fontSize',
+						'fontFamily',
+						'highlight',
+						'horizontalLine',
+						'|',
+						'imageUpload',
+						'pageBreak',
+						'blockQuote',
+						'insertTable',
+						'mediaEmbed',
+						'undo',
+						'redo',
+						'|',
+						'specialCharacters',
+						'code',
+						'codeBlock'
+					]
+				},
+				language: 'en-gb',
+				image: {
+					toolbar: [
+						'imageTextAlternative',
+						'imageStyle:full',
+						'imageStyle:side'
+					]
+				},
+				table: {
+					contentToolbar: [
+						'tableColumn',
+						'tableRow',
+						'mergeTableCells',
+						'tableCellProperties',
+						'tableProperties'
+					]
+				},
+				licenseKey: '',
+
+			})
+			.then(editor => {
+				window.editor = editor;
+
+			})
+			.catch(error => {
+				console.error('Oops, something gone wrong!');
+				console.error('Please, report the following error in the https://github.com/ckeditor/ckeditor5 with the build id and the error stack trace:');
+				console.warn('Build id: nim1yfuknopv-sf4lt0rm2rkj');
+				console.error(error);
+			});
+
+		
+	</script>
+</body>
+<script src="/js/function.js"></script>
+<script src="https://use.fontawesome.com/ada434e0af.js"></script>
+
+</html>

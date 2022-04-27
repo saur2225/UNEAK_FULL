@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    {{#if messages.info}}
+            <p>{{messages.info}}</p>
+        {{/if}}
+    <form autocomplete='off' onsubmit="return validate()" action="/user/forgot" method="POST" class='form'>
+    <div class='control'>
+    <h1>
+      Forgot Password
+    </h1>
+    <label for="email">Enter Your E-mail Id To Help Us Find Your Account</label>
+  </div>
+  <div class='control block-cube block-input'>
+    <input name='email' id="email" placeholder='E mail' type='text'>
+    <input type="hidden" value="{{csrfToken}}" name="_csrf">
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+  </div>
+  <button class='btn block-cube block-cube-hover' type='submit'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='text'>
+      Reset
+    </div>
+  </button>
+    </form>
+
+</body>
+<script>
+    const validate=()=>{
+        const email=document.getElementById('email').value
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        if(reg.test(email)==false)
+        {
+            alert('Invalid Email Address')
+            return false
+        }
+    }
+</script>
+</html>
